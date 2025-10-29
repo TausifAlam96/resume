@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume — Editable Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navBar">
+      <div class="controls">
+        <button id="editBtn" class="btn">Edit</button>
+        <button id="saveBtn" class="btn secondary">Save (local)</button>
+        <button id="resetBtn" class="btn secondary">Reset</button>
+        <button id="printBtn" class="btn">Print / Export PDF</button>
+        <button id="exportBtn" class="btn secondary">Export JSON</button>
+        <input
+          id="importFile"
+          type="file"
+          accept="application/json"
+          style="display: none"
+        />
+        <button id="importBtn" class="btn secondary">Import JSON</button>
+      </div>
+    </div>
+
+    <hr />
+
+    <div class="wrap">
+      <main class="resume">
+        <section class="card left" id="leftCol">
+          <header class="top">
+            <div class="hdr-main">
+              <h1 class="name" id="fullName" contenteditable="false">
+                Tausif Alam
+              </h1>
+              <div class="role" id="tagline" contenteditable="false">
+                FullStack Developer • React & JavaScript
+              </div>
+
+              <div class="contact" id="contact">
+                <div contenteditable="false">
+                  <a
+                    href="mailto:tausifalam27093@gmail.com?subject=Hello &body=I hope this email finds you well."
+                    >📧 tausifalam27093@gmail.com</a
+                  >
+                </div>
+                <div>
+                  <a contenteditable="false" href="tel:+919835629729"
+                    >📞 +91 98356 29729</a
+                  >
+                </div>
+                <div contenteditable="false">
+                  <a href="https://github.com/TausifAlam96">
+                    <i
+                      class="fa fa-github"
+                      style="font-size: 13px; color: black"
+                    ></i>
+                    TausifAlam96</a
+                  >
+                </div>
+                <div contenteditable="false">
+                  <a href="https://www.linkedin.com/in/tausif-alam-34b330247/"
+                    ><i
+                      class="fa fa-linkedin"
+                      style="font-size: 13px; color: #0077b5"
+                    ></i>
+                    tausif-alam-34b330247</a
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- <div class="avatar" id="avatar">TA</div> -->
+          </header>
+
+          <section>
+            <div class="section-title">Summary</div>
+            <div class="summary" id="summary" contenteditable="false">
+              A highly motivated and detail-oriented software engineer seeking
+              to use my software development and computer programming expertise
+              to provide innovative solutions and outstanding customer service
+              at your Company.
+            </div>
+          </section>
+
+          <section>
+            <div class="section-title">Skills</div>
+            <div class="skills" id="skills">
+              <div class="skill">
+                <div>JavaScript</div>
+                <div class="bar"><span style="width: 85%"></span></div>
+              </div>
+              <div class="skill">
+                <div>React</div>
+                <div class="bar"><span style="width: 80%"></span></div>
+              </div>
+              <div class="skill">
+                <div>HTML / CSS</div>
+                <div class="bar"><span style="width: 90%"></span></div>
+              </div>
+              <div class="skill">
+                <div>Node.js</div>
+                <div class="bar"><span style="width: 60%"></span></div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="section-title">Languages</div>
+            <ul class="list">
+              <li contenteditable="false">English — Fluent</li>
+              <li contenteditable="false">Urdu / Hindi — Native</li>
+            </ul>
+          </section>
+          <section>
+            <div class="section-title">Extras</div>
+            <div class="summary small" contenteditable="false">
+              Hobbies, volunteering, or a small line about availability and
+              notice period.
+            </div>
+          </section>
+        </section>
+
+        <aside class="card right">
+          <div class="box">
+            <div class="section-title">Experience</div>
+            <div id="experience">
+              <article class="job" data-id="1">
+                <h4 contenteditable="false">
+                  Frontend Developer —
+                  <a href="https://www.linkedin.com/company/braincraftin/"
+                    >BrainCraft</a
+                  >
+                </h4>
+                <div class="meta" contenteditable="false">
+                  Dec 2024 — Present · Remote
+                </div>
+                <p contenteditable="false">
+                  Interned as a Frontend Web Developer at BrainCraft using HTML,
+                  CSS, and JavaScript. Given below are a few of my
+                  contributions:
+                </p>
+                <ul>
+                  <li>
+                    <a href="https://abreastenggco.com/"
+                      >Abreast Engineering Company</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://samyakchilddevelopment.com/"
+                      >Samyak Child Development</a
+                    >
+                  </li>
+                </ul>
+              </article>
+              <!-- <article class="job" data-id="2">
+                <h4 contenteditable="false">Intern — Startup Inc.</h4>
+                <div class="meta" contenteditable="false">
+                  Jan 2022 — May 2023
+                </div>
+                <p contenteditable="false">
+                  Worked on landing pages and internal tools. Automated a
+                  deployment workflow to reduce manual steps.
+                </p>
+              </article> -->
+            </div>
+          </div>
+          <div class="box">
+            <div class="section-title">Projects</div>
+            <ul class="list" id="projects">
+              <li contenteditable="false">
+                <strong>Project A</strong> — Short description and tech used.
+              </li>
+              <li contenteditable="false">
+                <strong>Project B</strong> — Short description and tech used.
+              </li>
+            </ul>
+          </div>
+
+          <div class="box">
+            <div class="section-title">Education</div>
+            <div id="education">
+              <dl>
+                <dt contenteditable="false">
+                  BSc.IT — Kolhan University — (2022 - pursuing)
+                </dt>
+                <dd contenteditable="false">
+                  Pursuing Bachelor of Science in Information Technology
+                  (BSc.IT) with 7.07/10 CGPA
+                </dd>
+
+                <dt contenteditable="false">
+                  Intermediate — JAC Board — (2020 - 2022)
+                </dt>
+                <dd contenteditable="false">
+                  Completed Intermediate from JAC Board with 61.0%, 1st division
+                </dd>
+
+                <dt contenteditable="false">
+                  High School — ICSE Board — (2019 - 2020)
+                </dt>
+                <dd contenteditable="false">
+                  Completed High School from ICSE Board with 63.4%, 1st division
+                </dd>
+              </dl>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="section-title">Certifications</div>
+            <ul class="list" id="certs">
+              <li contenteditable="false">Certification Name — Issuer</li>
+              <li contenteditable="false">Another Cert — Issuer</li>
+            </ul>
+          </div>
+        </aside>
+      </main>
+
+      <footer class="small">
+        Tip: Click Edit to unlock fields, then Save. Use Print to export to PDF
+        for applications.
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

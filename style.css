@@ -1,0 +1,249 @@
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --glass: rgba(37, 99, 235, 0.08);
+  --max-width: 1100px;
+  --gap: 18px;
+  --radius: 12px;
+  --pad: 20px;
+  --Hrline: #2563eb;
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: var(--bg);
+  color: #0f172a;
+}
+
+hr {
+  width: 95%;
+  height: 2px;
+  background-color: var(--Hrline);
+  border: none;
+}
+a {
+  text-decoration: none;
+  color: rgb(0, 153, 255);
+}
+
+/* Nav Bar starts */
+.navBar {
+  padding: 20px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Controls */
+.controls {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+}
+.wrap {
+  max-width: var(--max-width);
+  margin: 18px auto;
+  padding: 18px;
+}
+
+/* Nav Bar ends */
+
+/* Header */
+.resume {
+  font-size: smaller;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--gap);
+}
+@media (max-width: 880px) {
+  .resume {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: var(--pad);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+header.top {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 12px;
+  flex: 0 0 96px;
+  background: linear-gradient(135deg, var(--glass), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--accent);
+}
+.hdr-main {
+  flex: 1;
+}
+.name {
+  font-size: x-large;
+  font-weight: 800;
+  margin: 0;
+}
+.role {
+  font-size: small;
+  margin: 6px 0;
+  color: var(--muted);
+}
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+  font-size: smaller;
+  color: var(--muted);
+}
+
+/* Left column */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.section-title {
+  font-size: medium;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.summary {
+  text-align: justify;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.skill {
+  font-size: 14px;
+}
+.bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+}
+
+/* Experience */
+.job {
+  margin-bottom: 14px;
+}
+.job h4 {
+  margin: 0;
+  font-size: 15px;
+}
+.job .meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.job p {
+  margin: 6px 0 0;
+  line-height: 1.45;
+}
+
+/* Education starts */
+#education dd {
+  font-size: smaller;
+  font-weight: 300;
+  margin-bottom: var(--gap);
+}
+/* Education ends */
+
+/* Right column */
+.right .box {
+  margin-bottom: var(--gap);
+}
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #efeff4;
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+  .wrap {
+    box-shadow: none;
+    margin: 0;
+  }
+  .controls,
+  .right .box:last-child {
+    display: none;
+  }
+  .resume {
+    grid-template-columns: 1fr 320px;
+  }
+  .card {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+/* Editable hints */
+[contenteditable] {
+  outline: 2px dashed transparent;
+  transition: outline-color 0.12s;
+}
+[contenteditable]:focus {
+  outline-color: rgba(37, 99, 235, 0.25);
+  border-radius: 6px;
+}
+
+footer.small {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 13px;
+}
